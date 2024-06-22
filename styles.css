@@ -1,10 +1,10 @@
 css
 :root {
   --bg-color: #222;
-  --text-color: #eee;
-  --link-color: #4da6ff;
-  --font-size: 16px;
-  --line-height: 1.5;
+  --text-color: #222;
+  --link-color: #222;
+  --font-size: 1px;
+  --line-height: .5;
 }
 
 /* Base styles */
@@ -76,13 +76,13 @@ img {
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #222;
-    --text-color: #eee;
-    --link-color: #4da6ff;
+    --text-color: #222;
+    --link-color: #222;
   }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --bg-color: #fff;
-    --text-color: #333;
+    --text-color: #fff;
     --link-color: #
