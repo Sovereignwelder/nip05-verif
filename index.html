@@ -47,44 +47,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floating Widget</title>
+    <title>Floating Buttons</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
         }
-        .floating-widget {
+        .floating-buttons {
             position: fixed;
             bottom: 0;
-            left: 0;
             width: 100%;
             display: flex;
             justify-content: space-around;
-            background-color: #f1f1f1;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
         }
-        .widget-button {
+        .floating-buttons a, .floating-buttons button {
             flex: 1;
+            margin: 0 5px;
             padding: 15px;
             text-align: center;
-            color: white;
             text-decoration: none;
-            font-size: 18px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
         }
-        .call-now {
+        .call-button {
             background-color: green;
         }
-        .email-me {
+        .email-button {
+            background-color: red;
+        }
+        .save-button {
             background-color: blue;
         }
     </style>
 </head>
 <body>
-    <div class="floating-widget">
-        <a href="tel:727-244-1667" class="widget-button call-now">Call Now</a>
-        <a href="mailto:Justin@sovereignwelder.com" class="widget-button email-me">Email Me</a>
-    </div>
+
+<div class="floating-buttons">
+    <a href="tel:727-244-1667" class="call-button">Call</a>
+    <a href="mailto:Justin@sovereignwelder.com" class="email-button">Email</a>
+    <button class="save-button" id="save-contact">Save Contact</button>
+</div>
+
+<script>
+    document.getElementById('save-contact').addEventListener('click', function() {
+        const contact = {
+            name: "Justin Bryan",
+            company: "CWI & NDT",
+            phone: "727-244-1667",
+            email: "Justin@sovereignwelder.com"
+        };
+
+        const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:${contact.name}
+ORG:${contact.company}
+TEL:${contact.phone}
+EMAIL:${contact.email}
+END:VCARD`;
+
+        const blob = new Blob([vcard], { type: 'text/vcard' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${contact.name}.vcf`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
+</script>
+
 </body>
 </html>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
