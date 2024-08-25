@@ -1,18 +1,30 @@
-
-<HTML> 
-<iframe src="https://sovereignwelder.github.io/superstore/index.html?pubkey=02780150b51c2c4cd9f66480e4667697f5a0c675b259ca9abd7073909e541ded67&relays=%5B%22wss://nostrue.com%22,%22wss://nostr.noones.com%22,%22wss://nos.lol%22%5D"
-  style="
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    border: none;
-    overflow: hidden;
-    z-index: 9999;
-  "
-  scrolling="yes"
-></iframe>
-
-</HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .banner {
+            width: 100%;
+            max-height: 30vh;
+            object-fit: cover;
+        }
+        iframe {
+            width: 100%;
+            height: calc(100vh - 30vh);
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.nostr.build/RbbYxhSQxdzmjbai.gif" alt="Banner" class="banner">
+    <iframe src="https://njump.me/npub12xamzh3hapdspk98dqmmdd4rx4w3m30vtz7apuuq3jdd8dm6y2gq9tstqx"></iframe>
+</body>
+</html>
