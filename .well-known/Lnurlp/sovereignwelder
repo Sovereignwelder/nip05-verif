@@ -1,8 +1,10 @@
 {
+  "callback": "http://btcpay.sovereignwelder.com/BTC/UILNURL/pay/i/KZZtjzHo62onnvBGA4PBL5",
+  "metadata": "[[\"text/plain\",\"Paid to Sovereignwelder (Order ID: )\"]]",
+  "tag": "payRequest",
   "minSendable": 1000,
-  "maxSendable": 500000000000,
-  "metadata": "[[\"text/plain\",\"speed-payment-address\"],[\"text/identifier\",\"sovereignwelder@speed.app\"]]",
-  "commentAllowed": 255,
-  "callback": "https://appapi.tryspeed.com/lnurl/aba33efd951ef5a35b2bc57cd546f38cccb5d1b8be76c911cafa5239c481762a",
-  "tag": "payRequest"
+  "maxSendable": 612000000000,
+  "commentAllowed": 0,
+  "nostrPubkey": "e25f8cb5dcf6206c9630bc56dcce7f7dddab10c76273b29db5af127759ef483f",
+  "allowsNostr": true
 }
